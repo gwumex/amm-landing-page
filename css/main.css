@@ -46,6 +46,30 @@ li{
 
 }
 
+@keyframes drop {
+	0% {
+		opacity: 1;
+		transform: translateY(-10px);
+	}
+  10% {
+		opacity: 1;
+		transform: translatex(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(10px);
+	}
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from { border-color: rgb(240, 205, 139); }
+  to { border-color: transparent }
+  
+}
 
 .container{
   width: 100%;
@@ -103,24 +127,6 @@ height: 4em;
 }
 
 /* typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  from { border-color: rgb(240, 205, 139); }
-  to { border-color: transparent }
-  
-}
-.typed-out {
-  overflow: hidden;
-  border-right: .15em solid orange;
-  white-space: nowrap;
-  font-size: 1.6rem;
-  width: 0;
-  animation: typing 9s forwards;
-}
 .container1 {
   display: inline-block;
 }
@@ -134,17 +140,6 @@ height: 4em;
 .heading {
   margin-top: 4em;
   width: 90%;
-}
-.headin {
-  margin-left: 2rem;
-  color: rgb(255, 255, 255);
-  font-family: Ubuntu-condensed, sans-serif;
-  font-size: 4rem;
-  text-align: left;
-  width: 0;
-  text-shadow: 3px 3px 3px #4d4646;
-  overflow: hidden;
-  border-right: 0.15rem solid rgb(21, 16, 6);
 }
 
 .heading1
@@ -248,6 +243,7 @@ height: 4em;
 }
 .shadow{
   width: 25em;
+  animation: drop 500ms ease  infinite;
 }
 
 @media only screen and ( max-width: 800px){
