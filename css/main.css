@@ -109,8 +109,9 @@ height: 4em;
 }
 
 @keyframes blink {
-  from { border-color: transparent }
-  to { border-color: orange; }
+  from { border-color: rgb(240, 205, 139); }
+  to { border-color: transparent }
+  
 }
 .typed-out {
   overflow: hidden;
@@ -143,7 +144,7 @@ height: 4em;
   width: 0;
   text-shadow: 3px 3px 3px #4d4646;
   overflow: hidden;
-  border-right: 0.15rem solid orange;
+  border-right: 0.15rem solid rgb(21, 16, 6);
 }
 
 .heading1
@@ -155,7 +156,7 @@ height: 4em;
   overflow: hidden;
   text-align: left;
   text-shadow: 3px 3px 3px #4d4646;
-  border-right: .15em solid orange; 
+
   font-weight: 900;
   white-space: nowrap; 
   width: 0;
@@ -164,8 +165,9 @@ height: 4em;
 
 
 .c1{
+
   animation: typing 1s steps(20, end) forwards,
-  blink 0;
+  blink .8s infinite;;
 }
 .c2{
   animation: typing 1s steps(20, end) forwards,
