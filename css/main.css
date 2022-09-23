@@ -10,7 +10,7 @@ html {
 body {
   margin: 0%;
   padding: 0;
-  background-color: blueviolet;
+  background-color: rgb(184, 57, 57);
 }
 
 /* animation class*/
@@ -360,7 +360,6 @@ li {
   }
 
   body {
-    background-color: green;
     height: 100%;
     overflow: hidden;
   }
