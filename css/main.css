@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  font-family: Ubuntu;
+}
+body { 
+  margin: 0%;
+  padding: 0;
+  background-color: blueviolet;
+}
+
+a{
+  text-decoration: none;
+  font-size: 2em;
+  color: black;
+}
+li{
+  list-style-type: none;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  box-shadow: 7.43055534362793px 14.86111068725586px 26px rgba(0, 0, 0, 0.15000000596046448);
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  background-color:antiquewhite;
+  padding: 3em;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.content {
+  width: 60%;
+  overflow: hidden;
+ 
+}
+.navbar {
+height: 4em;
+ display: flex;
+ margin-left: 2em;
+}
+
+.navlinks{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  position: absolute;
+  left: 40rem;
+}
+.navlink{
+   margin: 0 1em;
+}
+.navlink > a{
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.navlink > a:hover{
+  color: rgba(112,112,112,1);
+}
+
+.heading {
+  margin-top: 4em;
+  width: 90%;
+  overflow: hidden;
+}
+.heading1 {
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 70%;
+  color: rgb(18, 17, 17);
+  font-family: Ubuntu-condensed, sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  text-align: left;
+  display: block;
+  text-shadow: 3px 3px 3px #ababab;
+}
+.heading2{
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 60%;
+  color: rgba(112,112,112,1);
+  font-family: Ubuntu, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: left;
+  display: block;
+}
+
+.btn-group{
+  width: fit-content;
+  margin-top: 3rem;
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.btn-each{
+  font-size: 1.5rem;
+  width: 200px;
+  height: 50px;
+  background-image: linear-gradient(90deg, #050505 3.66%, #275c737f 45.35%, #ff0000 70%, #ff00d9 94.35%);
+  text-align: center;
+  margin-left: 2rem;
+  border-radius: 10px;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 3px #a09e9e;
+
+}
+.btn{
+  color: aliceblue;
+}
+.avatar{
+  height: auto;
+  width: 40%;
+}
+.road{
+  width: 60%;
+  height: 100%;
+  opacity: 1;
+  top: 0px;
+  right:  0px;
+  overflow: hidden;
+  position: absolute;
+}
+.road > img{
+  height: 100%;
+  width: 100%;
+}
+.shadow-container{
+  width: fit-content;
+  overflow: hidden;
+  position: absolute;
+  right: 20rem;
+  bottom: 5rem;
+}
+.shadow{
+  width: 25em;
+}
+
+@media only screen and ( max-width: 800px){
+  html{
+    font-size: 8px;
+  }
+  body{
+    background-color: green;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .content {
+    width: 100%;
+    overflow: hidden;
+  }
+  .navbar {
+     height: 3em;
+    }
+  .navlink{
+      margin: 0 0.5em;
+   }
+   .navlink > a{
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+  .heading {
+    margin-top: 2em;
+  }
+  .avatar{
+    display: none;
+  }
+  .heading1 {
+    margin-left: auto;
+    margin-top: 3rem;
+    width: 100%;
+  }
+  .heading2{
+    margin-left: auto;
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 20px;
+  }
+  .btn-group{
+    width: fit-content;
+    margin-top: 3rem;
+    display: flex;
+    height: auto;
+    margin-left: 0;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    background-color: #ff0000;
+    padding: 0;
+  }
+  
+  .btn-each{
+    font-size: 1.5rem;
+    width: 12rem;
+    height: 5rem;
+    background-image: linear-gradient(90deg, #050505 3.66%, #275c737f 45.35%, #ff0000 70%, #ff00d9 94.35%);
+    text-align: center;
+    border-radius: 10px;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+ .road{
+    width: 50%;
+    height: 100%;
+    opacity: 1;
+    top: 0px;
+    right:  0px;
+  }
+  .road > img{
+    height: 100%;
+    width: 100%;
+  }
+  .shadow-container{
+    width: fit-content;
+    overflow: hidden;
+    right: 5rem;
+    bottom: 5rem;
+  }
+  .shadow{
+    width: 22em;
+  }
+}
