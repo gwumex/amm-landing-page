@@ -14,11 +14,39 @@ body {
 a{
   text-decoration: none;
   font-size: 2em;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 li{
   list-style-type: none;
 }
+
+/* animation class*/
+.anime {
+
+  /*Cool marine gradient: Grey, blue, violet, grey again */
+  background: linear-gradient(
+    -90deg,
+    #2c3e50,
+    #2a1c20,
+    #1d2671,
+    #141e30,
+    #6dd5ed
+  );
+  background-size: 400% 400%;
+  animation: backgroundChange4 3s ease infinite;
+}
+
+@keyframes backgroundChange4 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+
+}
+
+
 .container{
   width: 100%;
   height: 100vh;
@@ -32,6 +60,16 @@ li{
   display: flex;
   flex-direction: row;
   position: relative;
+}
+
+.gradient {
+  --pc: 0%;
+  --co: 100%;
+  
+  width: 100vw;
+  height: 100vh;
+  transition: --pc 3s, --co 3s;
+  background: linear-gradient(30deg, purple var(--pc), coral var(--co), orange);
 }
 .content {
   width: 60%;
@@ -49,7 +87,9 @@ height: 4em;
   flex-direction: row;
   padding: 0;
   position: absolute;
-  left: 40rem;
+  right: 30rem;
+  z-index: 1;
+
 }
 .navlink{
    margin: 0 1em;
@@ -59,31 +99,89 @@ height: 4em;
   font-weight: 600;
 }
 .navlink > a:hover{
-  color: rgba(112,112,112,1);
+  color: rgb(221, 201, 201);
 }
 
+/* typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: orange; }
+}
+.typed-out {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  width: 0;
+  animation: typing 9s forwards;
+}
+.container1 {
+  display: inline-block;
+}
+.container2 {
+  display: inline-block;
+}
+.container3 {
+  display: inline-block;
+}
+/* end */
 .heading {
   margin-top: 4em;
   width: 90%;
-  overflow: hidden;
 }
-.heading1 {
+.headin {
   margin-left: 2rem;
-  margin-top: 2rem;
-  width: 70%;
-  color: rgb(18, 17, 17);
+  color: rgb(255, 255, 255);
   font-family: Ubuntu-condensed, sans-serif;
-  font-weight: 800;
   font-size: 4rem;
   text-align: left;
-  display: block;
-  text-shadow: 3px 3px 3px #ababab;
+  width: 0;
+  text-shadow: 3px 3px 3px #4d4646;
+  overflow: hidden;
+  border-right: 0.15rem solid orange;
+}
+
+.heading1
+{
+  margin-left: 2rem;
+  color: rgb(255, 255, 255);
+  font-family: Ubuntu-condensed, sans-serif;
+  font-size: 4rem;
+  overflow: hidden;
+  text-align: left;
+  text-shadow: 3px 3px 3px #4d4646;
+  border-right: .15em solid orange; 
+  font-weight: 900;
+  white-space: nowrap; 
+  width: 0;
+
+}
+
+
+.c1{
+  animation: typing 1s steps(20, end) forwards,
+  blink 0;
+}
+.c2{
+  animation: typing 1s steps(20, end) forwards,
+  blink .8s infinite;
+  animation-delay: 1s;
+}
+.c3{
+  animation: typing 1s steps(20, end) forwards,
+  blink .8s infinite;
+  animation-delay: 2s;
 }
 .heading2{
   margin-left: 2rem;
   margin-top: 2rem;
   width: 60%;
-  color: rgba(112,112,112,1);
+  color: rgb(185, 176, 176);
   font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 2rem;
@@ -102,22 +200,25 @@ height: 4em;
 }
 
 .btn-each{
-  font-size: 1.5rem;
-  width: 200px;
+  font-size: 1rem;
+  width: 150px;
   height: 50px;
   background-image: linear-gradient(90deg, #050505 3.66%, #275c737f 45.35%, #ff0000 70%, #ff00d9 94.35%);
   text-align: center;
   margin-left: 2rem;
   border-radius: 10px;
-  border: 5px solid white;
+  border: 2px solid rgb(234, 220, 220);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 3px 3px #a09e9e;
+  box-shadow: 3px 3px 3px #3c3939;
 
 }
 .btn{
   color: aliceblue;
+}
+.btn:hover{
+  color: #a09e9e;
 }
 .avatar{
   height: auto;
@@ -238,3 +339,4 @@ height: 4em;
     width: 22em;
   }
 }
+
